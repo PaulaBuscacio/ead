@@ -56,4 +56,8 @@ public class CourseModel implements Serializable {
     @Fetch(FetchMode.SUBSELECT)
     private Set<CourseUserModel> coursesUsers;
 
+    public CourseUserModel convertToCourseUserModel(UUID userId) {
+        return new CourseUserModel(null, userId, this);
+    }
+
 }
