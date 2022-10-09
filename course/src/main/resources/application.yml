@@ -3,12 +3,11 @@ server:
   servlet:
     context-path: '/ead-course/'
 
-
 spring:
   application:
     name: ead-course-service
   datasource:
-    url:  jdbc:postgresql://localhost:5432/ead-course
+    url:  jdbc:postgresql://localhost:5432/ead-course-v2
     username: postgres
     password: db_123
   jpa:
@@ -24,12 +23,13 @@ spring:
     ansi:
       enabled: Always
 
-logging:
+
   level:
     com.ead: TRACE
     root: INFO
     org.springframework.web: DEBUG
     org.hibernate: INFO
+
 
 ead:
   api:
@@ -38,7 +38,7 @@ ead:
 
 eureka:
   client:
-    service-url:
+    serviceUrl:
       defaultZone: 'http://localhost:8761/eureka'
   instance:
     hostname: localhost
