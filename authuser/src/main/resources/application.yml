@@ -22,6 +22,8 @@ spring:
   output:
     ansi:
       enabled: Always
+  rabbitmq:
+    address: amqps://cjzqsplp:TItj32q67Oqz6iKxQc-De4D8oJPIC00Z@whale.rmq.cloudamqp.com/cjzqsplp
 
 
 
